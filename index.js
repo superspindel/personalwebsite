@@ -10,11 +10,10 @@ const pug = require('pug');
 
 var grades = require('./grades');
 
-
-app.use(require('express').static('public'));
+app.use(require('express').static('public')); // to access public static files in request chain
 
 app.get('/', function(req, res){
-    res.render('home.pug');
+    res.render('home.pug'); // render for pug files
 });
 
 app.get('/contact', function(req, res){
@@ -23,6 +22,7 @@ app.get('/contact', function(req, res){
 
 
 
+// socket connection handler
 
 
 io.on('connection', function (socket) {
@@ -57,7 +57,7 @@ io.on('connection', function (socket) {
 
 
 
-
+// start server
 
 http.listen(3000, function () {
     console.log('listening on *:3000')

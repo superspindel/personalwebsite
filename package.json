@@ -10,7 +10,7 @@
     "pug": "latest"
   },
   "scripts": {
-  	"start": "node server.js"
+  	"start": "node index.js"
   },
   "main": "lib/index.js"
 }
