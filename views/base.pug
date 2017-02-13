@@ -1,0 +1,79 @@
+doctype html(lang='en')
+head
+    meta(charset='utf-8')
+    |
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    |
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='description', content='')
+    |
+    meta(name='author', content='')
+    |
+    link(rel='icon', href='https://getbootstrap.com/favicon.ico')
+    |
+    title
+        | Viktor F&auml;llman
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    link(href='https://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css', rel='stylesheet')
+    // Latest compiled and minified CSS
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css')
+    // Optional theme
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css')
+    // Latest compiled and minified JavaScript
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+    // Custom styles for this template
+    link(rel='stylesheet', type='text/css', href='css/style.css')
+body
+    #main.site-wrapper
+        .site-wrapper-inner
+            .cover-container
+                .masthead.clearfix
+                    .inner
+                        h3.masthead-brand Viktor F&auml;llman
+                        |
+                        nav
+                            ul.nav.masthead-nav
+                                li.active
+                                    a#home(href='/')
+                                        | About
+                                |
+                                li
+                                    a#courses(href='/')
+                                        | Courses
+                                |
+                                li
+                                    a#projects(href='/')
+                                        | Projects
+                                |
+                                li
+                                    a#contact(href='/contact')
+                                        | Contact
+                |
+                block content
+    #mySidenav.sidenav
+        a#openbtn.openbtn(href="javascript:void('open')", onclick='openNav()', title='open chat')
+            span.glyphicon.glyphicon-comment
+        |
+        a#closebtn.closebtn(href="javascript:void('close')", onclick='closeNav()') &times;
+        |
+        ul#messages
+        |
+        form#formen.forms(action='', style='display: none;')
+            input#m.forminput(autocomplete='off')
+            |
+            button.formbutton
+                | Send
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script.
+        window.jQuery || document.write('<script src="https://getbootstrap.com/assets/js/vendor/jquery.min.js"><\\/script>')
+    script(src='https://getbootstrap.com/dist/js/bootstrap.min.js')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='js/scripts.js')
+

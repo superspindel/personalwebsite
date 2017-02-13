@@ -21,18 +21,26 @@ $('#projects').click(function(){
 
 $('#contact').click(function(){
     socket.emit('contact button', 'contact pushed');
-    return false;
 });
 
 function openNav() {
     document.getElementById("mySidenav").style.height = "450px";
+    document.getElementById("mySidenav").style.width = "40%";
+    document.getElementById("mySidenav").style.left = "30%";
     document.getElementById("formen").style.display = "block";
+    document.getElementById("closebtn").style.display = "flex";
+    document.getElementById("openbtn").style.display = "none";
+    openbtn
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
     document.getElementById("mySidenav").style.height = "0";
+    document.getElementById("mySidenav").style.width = "5%";
+    document.getElementById("mySidenav").style.left = "47.5%";
     document.getElementById("formen").style.display = "none";
+    document.getElementById("closebtn").style.display = "none";
+    document.getElementById("openbtn").style.display = "flex";
     return false;
 }
 

@@ -6,15 +6,19 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var request = require('request');
 var cheerio = require('cheerio');
+const pug = require('pug');
 
 var grades = require('./grades');
 
 
 app.use(require('express').static('public'));
 
-app.get('/', function(req, res)
-{
-    res.sendFile(__dirname+'/html'+'/index.html');
+app.get('/', function(req, res){
+    res.render('home.pug');
+});
+
+app.get('/contact', function(req, res){
+   res.render('contact.pug');
 });
 
 
